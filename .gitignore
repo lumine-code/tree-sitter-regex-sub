@@ -1,0 +1,5 @@
+build/
+node_modules/
+tree-sitter-regex-sub.wasm
+tree-sitter-regex_replacement.wasm
+*.log

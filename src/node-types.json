@@ -1,0 +1,67 @@
+[
+  {
+    "type": "document",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "capture_reference",
+          "named": true
+        },
+        {
+          "type": "dollar_escape",
+          "named": true
+        },
+        {
+          "type": "escape_sequence",
+          "named": true
+        },
+        {
+          "type": "match_reference",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "match_reference",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "$&",
+    "named": false
+  },
+  {
+    "type": "$'",
+    "named": false
+  },
+  {
+    "type": "$`",
+    "named": false
+  },
+  {
+    "type": "capture_reference",
+    "named": true
+  },
+  {
+    "type": "dollar_escape",
+    "named": true
+  },
+  {
+    "type": "escape_sequence",
+    "named": true
+  },
+  {
+    "type": "text",
+    "named": true
+  }
+]

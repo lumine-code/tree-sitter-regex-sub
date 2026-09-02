@@ -1,0 +1,81 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
+  "name": "regex_replacement",
+  "rules": {
+    "document": {
+      "type": "REPEAT",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "capture_reference"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "match_reference"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dollar_escape"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "escape_sequence"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "text"
+          }
+        ]
+      }
+    },
+    "capture_reference": {
+      "type": "PATTERN",
+      "value": "\\$(?:[1-9][0-9]?|0[1-9])"
+    },
+    "match_reference": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "$&"
+        },
+        {
+          "type": "STRING",
+          "value": "$`"
+        },
+        {
+          "type": "STRING",
+          "value": "$'"
+        }
+      ]
+    },
+    "dollar_escape": {
+      "type": "STRING",
+      "value": "$$"
+    },
+    "escape_sequence": {
+      "type": "PATTERN",
+      "value": "\\\\[^\\r\\n$]"
+    },
+    "text": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": -1,
+        "content": {
+          "type": "PATTERN",
+          "value": "[^$\\\\]+|[$\\\\]"
+        }
+      }
+    }
+  },
+  "extras": [],
+  "conflicts": [],
+  "precedences": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": [],
+  "reserved": {}
+}

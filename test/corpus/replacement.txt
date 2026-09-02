@@ -1,0 +1,66 @@
+==================
+Capture references
+==================
+$1 $01 $9 $10 $99 $100
+---
+
+(document
+  (capture_reference)
+  (text)
+  (capture_reference)
+  (text)
+  (capture_reference)
+  (text)
+  (capture_reference)
+  (text)
+  (capture_reference)
+  (text)
+  (capture_reference)
+  (text))
+
+==================
+Whole-match references and dollar escape
+==================
+$& $` $' $$ $$1
+---
+
+(document
+  (match_reference)
+  (text)
+  (match_reference)
+  (text)
+  (match_reference)
+  (text)
+  (dollar_escape)
+  (text)
+  (dollar_escape)
+  (text))
+
+==================
+Backslash escapes and literal dollars
+==================
+\n \t \\ \$ $0 $00 plain
+---
+
+(document
+  (escape_sequence)
+  (text)
+  (escape_sequence)
+  (text)
+  (escape_sequence)
+  (text)
+  (text)
+  (text)
+  (text)
+  (text)
+  (text)
+  (text)
+  (text))
+
+==================
+Empty template
+==================
+
+---
+
+(document)

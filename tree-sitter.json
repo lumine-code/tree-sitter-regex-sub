@@ -1,0 +1,27 @@
+{
+  "grammars": [
+    {
+      "name": "regex_replacement",
+      "camelcase": "RegexReplacement",
+      "scope": "source.regexp.replacement",
+      "path": ".",
+      "file-types": []
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "license": "MIT",
+    "description": "Parses regular-expression replacement templates with Tree-sitter.",
+    "authors": [
+      {
+        "name": "lumine-code"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/lumine-code/tree-sitter-regex-sub"
+    }
+  },
+  "bindings": {
+    "node": true
+  }
+}
