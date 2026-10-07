@@ -54,7 +54,6 @@ Backslash escapes and literal dollars
   (text)
   (text)
   (text)
-  (text)
   (text))
 
 ==================

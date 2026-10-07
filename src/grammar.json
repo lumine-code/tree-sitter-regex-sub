@@ -5,76 +5,259 @@
     "document": {
       "type": "REPEAT",
       "content": {
-        "type": "CHOICE",
+        "type": "SYMBOL",
+        "name": "_tokens_64"
+      }
+    },
+    "_tokens_64": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
         "members": [
           {
             "type": "SYMBOL",
-            "name": "capture_reference"
+            "name": "_tokens_8"
           },
           {
-            "type": "SYMBOL",
-            "name": "match_reference"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_tokens_8"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
           },
           {
-            "type": "SYMBOL",
-            "name": "dollar_escape"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_tokens_8"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
           },
           {
-            "type": "SYMBOL",
-            "name": "escape_sequence"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_tokens_8"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
           },
           {
-            "type": "SYMBOL",
-            "name": "text"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_tokens_8"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_tokens_8"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_tokens_8"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_tokens_8"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
           }
         ]
       }
     },
-    "capture_reference": {
-      "type": "PATTERN",
-      "value": "\\$(?:[1-9][0-9]?|0[1-9])"
+    "_tokens_8": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "_token"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_token"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_token"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_token"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_token"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_token"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_token"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_token"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          }
+        ]
+      }
     },
-    "match_reference": {
+    "_token": {
       "type": "CHOICE",
       "members": [
         {
-          "type": "STRING",
-          "value": "$&"
+          "type": "SYMBOL",
+          "name": "capture_reference"
         },
         {
-          "type": "STRING",
-          "value": "$`"
+          "type": "SYMBOL",
+          "name": "match_reference"
         },
         {
-          "type": "STRING",
-          "value": "$'"
+          "type": "SYMBOL",
+          "name": "dollar_escape"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "escape_sequence"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "text"
         }
       ]
-    },
-    "dollar_escape": {
-      "type": "STRING",
-      "value": "$$"
-    },
-    "escape_sequence": {
-      "type": "PATTERN",
-      "value": "\\\\[^\\r\\n$]"
-    },
-    "text": {
-      "type": "TOKEN",
-      "content": {
-        "type": "PREC",
-        "value": -1,
-        "content": {
-          "type": "PATTERN",
-          "value": "[^$\\\\]+|[$\\\\]"
-        }
-      }
     }
   },
   "extras": [],
   "conflicts": [],
   "precedences": [],
-  "externals": [],
+  "externals": [
+    {
+      "type": "SYMBOL",
+      "name": "capture_reference"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "match_reference"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "dollar_escape"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "escape_sequence"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "text"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "_error_sentinel"
+    }
+  ],
   "inline": [],
   "supertypes": [],
   "reserved": {}

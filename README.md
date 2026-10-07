@@ -5,7 +5,7 @@ Parses regular-expression replacement templates with Tree-sitter.
 ## Features
 
 - **Grammars**: provides Tree-sitter grammars.
-- **Capture references**: recognizes numeric substitutions from `$1` through `$99`.
+- **Capture references**: recognizes numeric substitutions from `$1` through `$99` and named substitutions such as `$<name>`.
 - **Match references**: recognizes `$&`, `` $` ``, and `$'` substitutions.
 - **Escapes**: distinguishes `$$` and backslash escape sequences from literal text.
 - **Bindings**: supports Node-API, source, and WebAssembly builds.

@@ -32,23 +32,6 @@
     }
   },
   {
-    "type": "match_reference",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "$&",
-    "named": false
-  },
-  {
-    "type": "$'",
-    "named": false
-  },
-  {
-    "type": "$`",
-    "named": false
-  },
-  {
     "type": "capture_reference",
     "named": true
   },
@@ -58,6 +41,10 @@
   },
   {
     "type": "escape_sequence",
+    "named": true
+  },
+  {
+    "type": "match_reference",
     "named": true
   },
   {
